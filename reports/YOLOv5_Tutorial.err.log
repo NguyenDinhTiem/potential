@@ -1,0 +1,95 @@
+Traceback (most recent call last):
+  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\jupyter_core\utils\__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "C:\Users\potential\anaconda3\envs\potential\lib\asyncio\base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+!git clone https://github.com/ultralytics/yolov5  # clone
+%cd yolov5
+%pip install -qr requirements.txt comet_ml  # install
+
+import torch
+import utils
+display = utils.notebook_init()  # checks
+------------------
+
+----- stdout -----
+[WinError 2] The system cannot find the file specified: 'yolov5'
+E:\Tiemblog\potential\potential
+----- stderr -----
+fatal: Too many arguments.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --reject-shallow      don't clone shallow repository
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    --recursive ...       alias of --recurse-submodules
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+    --remote-submodules   any cloned submodules will use their remote-tracking branch
+    --sparse              initialize sparse-checkout file to include only files at root
+----- stderr -----
+ERROR: Invalid requirement: '#'
+----- stdout -----
+Note: you may need to restart the kernel to use updated packages.
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[1], line 5[0m
+[0;32m      2[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124mcd[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124myolov5[39m[38;5;124m'[39m)
+[0;32m      3[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124mpip[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124minstall -qr requirements.txt comet_ml  # install[39m[38;5;124m'[39m)
+[1;32m----> 5[0m [38;5;28;01mimport[39;00m [38;5;21;01mtorch[39;00m
+[0;32m      6[0m [38;5;28;01mimport[39;00m [38;5;21;01mutils[39;00m
+[0;32m      7[0m display [38;5;241m=[39m utils[38;5;241m.[39mnotebook_init()  [38;5;66;03m# checks[39;00m
+
+[1;31mModuleNotFoundError[0m: No module named 'torch'
+

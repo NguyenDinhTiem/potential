@@ -1,0 +1,991 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Setup &#8212; AI Potential</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'YOLOv5_Tutorial';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NguyenDinhTiem/potential" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NguyenDinhTiem/potential/issues/new?title=Issue%20on%20page%20%2FYOLOv5_Tutorial.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/YOLOv5_Tutorial.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Setup</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detect">1. Detect</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validate">2. Validate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#train">3. Train</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#label-a-dataset-on-roboflow-optional">Label a dataset on Roboflow (optional)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize">4. Visualize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comet-logging-and-visualization-new">Comet Logging and Visualization 🌟 NEW</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clearml-logging-and-automation-new">ClearML Logging and Automation 🌟 NEW</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-logging">Local Logging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environments">Environments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#status">Status</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div align="center">
+  <a href="https://ultralytics.com/yolov5" target="_blank">
+    <img width="1024", src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov5/v70/splash.png"></a>
+<br>
+  <a href="https://bit.ly/yolov5-paperspace-notebook"><img src="https://assets.paperspace.io/img/gradient-badge.svg" alt="Run on Gradient"></a>
+  <a href="https://colab.research.google.com/github/ultralytics/yolov5/blob/master/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+  <a href="https://www.kaggle.com/ultralytics/yolov5"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open In Kaggle"></a>
+<br>
+<p>This <a href="https://github.com/ultralytics/yolov5">YOLOv5</a> 🚀 notebook by <a href="https://ultralytics.com">Ultralytics</a> presents simple train, validate and predict examples to help start your AI adventure.<br>We hope that the resources in this notebook will help you get the most out of YOLOv5. Please browse the YOLOv5 <a href="https://docs.ultralytics.com/yolov5">Docs</a> for details, raise an issue on <a href="https://github.com/ultralytics/yolov5">GitHub</a> for support, and join our <a href="https://discord.gg/2wNGbc6g9X">Discord</a> community for questions and discussions!</p>
+</div><section class="tex2jax_ignore mathjax_ignore" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h1>
+<p>Clone GitHub <a class="reference external" href="https://github.com/ultralytics/yolov5">repository</a>, install <a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/requirements.txt">dependencies</a> and check PyTorch and GPU.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ultralytics/yolov5<span class="w">  </span>#<span class="w"> </span>clone
+<span class="o">%</span><span class="k">cd</span> yolov5
+<span class="o">%</span><span class="k">pip</span> install -qr requirements.txt comet_ml  # install
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">utils</span>
+<span class="n">display</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">notebook_init</span><span class="p">()</span>  <span class="c1"># checks</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[WinError 2] The system cannot find the file specified: &#39;yolov5&#39;
+E:\Tiemblog\potential\potential
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fatal: Too many arguments.
+
+usage: git clone [&lt;options&gt;] [--] &lt;repo&gt; [&lt;dir&gt;]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --reject-shallow      don&#39;t clone shallow repository
+    -n, --no-checkout     don&#39;t create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don&#39;t use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recurse-submodules[=&lt;pathspec&gt;]
+                          initialize submodules in the clone
+    --recursive ...       alias of --recurse-submodules
+    -j, --jobs &lt;n&gt;        number of submodules cloned in parallel
+    --template &lt;template-directory&gt;
+                          directory from which templates will be used
+    --reference &lt;repo&gt;    reference repository
+    --reference-if-able &lt;repo&gt;
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin &lt;name&gt;   use &lt;name&gt; instead of &#39;origin&#39; to track upstream
+    -b, --branch &lt;branch&gt;
+                          checkout &lt;branch&gt; instead of the remote&#39;s HEAD
+    -u, --upload-pack &lt;path&gt;
+                          path to git-upload-pack on the remote
+    --depth &lt;depth&gt;       create a shallow clone of that depth
+    --shallow-since &lt;time&gt;
+                          create a shallow clone since a specific time
+    --shallow-exclude &lt;revision&gt;
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don&#39;t clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir &lt;gitdir&gt;
+                          separate git dir from working tree
+    -c, --config &lt;key=value&gt;
+                          set config inside the new repository
+    --server-option &lt;server-specific&gt;
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter &lt;args&gt;       object filtering
+    --remote-submodules   any cloned submodules will use their remote-tracking branch
+    --sparse              initialize sparse-checkout file to include only files at root
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR: Invalid requirement: &#39;#&#39;
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;cd&#39;</span><span class="p">,</span> <span class="s1">&#39;yolov5&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;pip&#39;</span><span class="p">,</span> <span class="s1">&#39;install -qr requirements.txt comet_ml  # install&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">torch</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">utils</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">display</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">notebook_init</span><span class="p">()</span>  <span class="c1"># checks</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;torch&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="detect">
+<h2>1. Detect<a class="headerlink" href="#detect" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">detect.py</span></code> runs YOLOv5 inference on a variety of sources, downloading models automatically from the <a class="reference external" href="https://github.com/ultralytics/yolov5/releases">latest YOLOv5 release</a>, and saving results to <code class="docutils literal notranslate"><span class="pre">runs/detect</span></code>. Example inference sources are:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>detect.py<span class="w"> </span>--source<span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1"># webcam</span>
+<span class="w">                          </span>img.jpg<span class="w">  </span><span class="c1"># image</span>
+<span class="w">                          </span>vid.mp4<span class="w">  </span><span class="c1"># video</span>
+<span class="w">                          </span>screen<span class="w">  </span><span class="c1"># screenshot</span>
+<span class="w">                          </span>path/<span class="w">  </span><span class="c1"># directory</span>
+<span class="w">                         </span><span class="s1">&#39;path/*.jpg&#39;</span><span class="w">  </span><span class="c1"># glob</span>
+<span class="w">                         </span><span class="s1">&#39;https://youtu.be/Zgi9g1ksQHc&#39;</span><span class="w">  </span><span class="c1"># YouTube</span>
+<span class="w">                         </span><span class="s1">&#39;rtsp://example.com/media.mp4&#39;</span><span class="w">  </span><span class="c1"># RTSP, RTMP, HTTP stream</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python<span class="w"> </span>detect.py<span class="w"> </span>--weights<span class="w"> </span>yolov5s.pt<span class="w"> </span>--img<span class="w"> </span><span class="m">640</span><span class="w"> </span>--conf<span class="w"> </span><span class="m">0</span>.25<span class="w"> </span>--source<span class="w"> </span>data/images
+<span class="c1"># display.Image(filename=&#39;runs/detect/exp/zidane.jpg&#39;, width=600)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">detect: </span>weights=[&#39;yolov5s.pt&#39;], source=data/images, data=data/coco128.yaml, imgsz=[640, 640], conf_thres=0.25, iou_thres=0.45, max_det=1000, device=, view_img=False, save_txt=False, save_conf=False, save_crop=False, nosave=False, classes=None, agnostic_nms=False, augment=False, visualize=False, update=False, project=runs/detect, name=exp, exist_ok=False, line_thickness=3, hide_labels=False, hide_conf=False, half=False, dnn=False, vid_stride=1
+YOLOv5 🚀 v7.0-136-g71244ae Python-3.9.16 torch-2.0.0+cu118 CUDA:0 (Tesla T4, 15102MiB)
+
+Downloading https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5s.pt to yolov5s.pt...
+100% 14.1M/14.1M [00:00&lt;00:00, 24.5MB/s]
+
+Fusing layers... 
+YOLOv5s summary: 213 layers, 7225885 parameters, 0 gradients
+image 1/2 /content/yolov5/data/images/bus.jpg: 640x480 4 persons, 1 bus, 41.5ms
+image 2/2 /content/yolov5/data/images/zidane.jpg: 384x640 2 persons, 2 ties, 60.0ms
+Speed: 0.5ms pre-process, 50.8ms inference, 37.7ms NMS per image at shape (1, 3, 640, 640)
+Results saved to <span class=" -Color -Color-Bold">runs/detect/exp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>        
+<img align="left" src="https://user-images.githubusercontent.com/26833433/127574988-6a558aa1-d268-44b9-bf6b-62d4c605cc72.jpg" width="600"></p>
+</section>
+<section id="validate">
+<h2>2. Validate<a class="headerlink" href="#validate" title="Permalink to this heading">#</a></h2>
+<p>Validate a model’s accuracy on the <a class="reference external" href="https://cocodataset.org/#home">COCO</a> dataset’s <code class="docutils literal notranslate"><span class="pre">val</span></code> or <code class="docutils literal notranslate"><span class="pre">test</span></code> splits. Models are downloaded automatically from the <a class="reference external" href="https://github.com/ultralytics/yolov5/releases">latest YOLOv5 release</a>. To show results by class use the <code class="docutils literal notranslate"><span class="pre">--verbose</span></code> flag.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download COCO val</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">hub</span><span class="o">.</span><span class="n">download_url_to_file</span><span class="p">(</span><span class="s1">&#39;https://ultralytics.com/assets/coco2017val.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;tmp.zip&#39;</span><span class="p">)</span>  <span class="c1"># download (780M - 5000 images)</span>
+<span class="o">!</span>unzip<span class="w"> </span>-q<span class="w"> </span>tmp.zip<span class="w"> </span>-d<span class="w"> </span>../datasets<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>tmp.zip<span class="w">  </span>#<span class="w"> </span>unzip
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 780M/780M [00:12&lt;00:00, 66.6MB/s]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Validate YOLOv5s on COCO val</span>
+<span class="o">!</span>python<span class="w"> </span>val.py<span class="w"> </span>--weights<span class="w"> </span>yolov5s.pt<span class="w"> </span>--data<span class="w"> </span>coco.yaml<span class="w"> </span>--img<span class="w"> </span><span class="m">640</span><span class="w"> </span>--half
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">val: </span>data=/content/yolov5/data/coco.yaml, weights=[&#39;yolov5s.pt&#39;], batch_size=32, imgsz=640, conf_thres=0.001, iou_thres=0.6, max_det=300, task=val, device=, workers=8, single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=True, project=runs/val, name=exp, exist_ok=False, half=True, dnn=False
+YOLOv5 🚀 v7.0-136-g71244ae Python-3.9.16 torch-2.0.0+cu118 CUDA:0 (Tesla T4, 15102MiB)
+
+Fusing layers... 
+YOLOv5s summary: 213 layers, 7225885 parameters, 0 gradients
+<span class=" -Color -Color-Bold -Color-Bold-Blue">val: </span>Scanning /content/datasets/coco/val2017... 4952 images, 48 backgrounds, 0 corrupt: 100% 5000/5000 [00:02&lt;00:00, 2024.59it/s]
+<span class=" -Color -Color-Bold -Color-Bold-Blue">val: </span>New cache created: /content/datasets/coco/val2017.cache
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100% 157/157 [01:25&lt;00:00,  1.84it/s]
+                   all       5000      36335      0.671      0.519      0.566      0.371
+Speed: 0.1ms pre-process, 3.1ms inference, 2.3ms NMS per image at shape (32, 3, 640, 640)
+
+Evaluating pycocotools mAP... saving runs/val/exp/yolov5s_predictions.json...
+loading annotations into memory...
+Done (t=0.43s)
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=5.32s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=78.89s).
+Accumulating evaluation results...
+DONE (t=14.51s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.374
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.572
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.402
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.211
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.423
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.489
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.311
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.516
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.378
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.625
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.722
+Results saved to <span class=" -Color -Color-Bold">runs/val/exp</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="train">
+<h2>3. Train<a class="headerlink" href="#train" title="Permalink to this heading">#</a></h2>
+<p align=""><a href="https://bit.ly/ultralytics_hub"><img width="1000" src="https://github.com/ultralytics/assets/raw/main/im/integrations-loop.png"/></a></p>
+Close the active learning loop by sampling images from your inference conditions with the `roboflow` pip package
+<br><br>
+<p>Train a YOLOv5s model on the <a class="reference external" href="https://www.kaggle.com/ultralytics/coco128">COCO128</a> dataset with <code class="docutils literal notranslate"><span class="pre">--data</span> <span class="pre">coco128.yaml</span></code>, starting from pretrained <code class="docutils literal notranslate"><span class="pre">--weights</span> <span class="pre">yolov5s.pt</span></code>, or from randomly initialized <code class="docutils literal notranslate"><span class="pre">--weights</span> <span class="pre">''</span> <span class="pre">--cfg</span> <span class="pre">yolov5s.yaml</span></code>.</p>
+<ul class="simple">
+<li><p><strong>Pretrained <a class="reference external" href="https://github.com/ultralytics/yolov5/tree/master/models">Models</a></strong> are downloaded
+automatically from the <a class="reference external" href="https://github.com/ultralytics/yolov5/releases">latest YOLOv5 release</a></p></li>
+<li><p><strong><a class="reference external" href="https://github.com/ultralytics/yolov5/tree/master/data">Datasets</a></strong> available for autodownload include: <a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/data/coco.yaml">COCO</a>, <a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/data/coco128.yaml">COCO128</a>, <a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/data/VOC.yaml">VOC</a>, <a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/data/Argoverse.yaml">Argoverse</a>, <a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/data/VisDrone.yaml">VisDrone</a>, <a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/data/GlobalWheat2020.yaml">GlobalWheat</a>, <a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/data/xView.yaml">xView</a>, <a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/data/Objects365.yaml">Objects365</a>, <a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/data/SKU-110K.yaml">SKU-110K</a>.</p></li>
+<li><p><strong>Training Results</strong> are saved to <code class="docutils literal notranslate"><span class="pre">runs/train/</span></code> with incrementing run directories, i.e. <code class="docutils literal notranslate"><span class="pre">runs/train/exp2</span></code>, <code class="docutils literal notranslate"><span class="pre">runs/train/exp3</span></code> etc.
+<br></p></li>
+</ul>
+<p>A <strong>Mosaic Dataloader</strong> is used for training which combines 4 images into 1 mosaic.</p>
+</section>
+<section id="label-a-dataset-on-roboflow-optional">
+<h2>Label a dataset on Roboflow (optional)<a class="headerlink" href="#label-a-dataset-on-roboflow-optional" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://roboflow.com/?ref=ultralytics">Roboflow</a> enables you to easily <strong>organize, label, and prepare</strong> a high quality dataset with your own custom data. Roboflow also makes it easy to establish an active learning pipeline, collaborate with your team on dataset improvement, and integrate directly into your model building workflow with the <code class="docutils literal notranslate"><span class="pre">roboflow</span></code> pip package.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Select YOLOv5 🚀 logger {run: &#39;auto&#39;}</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="s1">&#39;Comet&#39;</span> <span class="c1">#@param [&#39;Comet&#39;, &#39;ClearML&#39;, &#39;TensorBoard&#39;]</span>
+
+<span class="k">if</span> <span class="n">logger</span> <span class="o">==</span> <span class="s1">&#39;Comet&#39;</span><span class="p">:</span>
+  <span class="o">%</span><span class="k">pip</span> install -q comet_ml
+  <span class="kn">import</span> <span class="nn">comet_ml</span><span class="p">;</span> <span class="n">comet_ml</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="k">elif</span> <span class="n">logger</span> <span class="o">==</span> <span class="s1">&#39;ClearML&#39;</span><span class="p">:</span>
+  <span class="o">%</span><span class="k">pip</span> install -q clearml
+  <span class="kn">import</span> <span class="nn">clearml</span><span class="p">;</span> <span class="n">clearml</span><span class="o">.</span><span class="n">browser_login</span><span class="p">()</span>
+<span class="k">elif</span> <span class="n">logger</span> <span class="o">==</span> <span class="s1">&#39;TensorBoard&#39;</span><span class="p">:</span>
+  <span class="o">%</span><span class="k">load_ext</span> tensorboard
+  <span class="o">%</span><span class="k">tensorboard</span> --logdir runs/train
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Train YOLOv5s on COCO128 for 3 epochs</span>
+<span class="o">!</span>python<span class="w"> </span>train.py<span class="w"> </span>--img<span class="w"> </span><span class="m">640</span><span class="w"> </span>--batch<span class="w"> </span><span class="m">16</span><span class="w"> </span>--epochs<span class="w"> </span><span class="m">3</span><span class="w"> </span>--data<span class="w"> </span>coco128.yaml<span class="w"> </span>--weights<span class="w"> </span>yolov5s.pt<span class="w"> </span>--cache
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-04-09 14:11:38.063605: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-04-09 14:11:39.026661: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+<span class=" -Color -Color-Bold -Color-Bold-Blue">train: </span>weights=yolov5s.pt, cfg=, data=coco128.yaml, hyp=data/hyps/hyp.scratch-low.yaml, epochs=3, batch_size=16, imgsz=640, rect=False, resume=False, nosave=False, noval=False, noautoanchor=False, noplots=False, evolve=None, bucket=, cache=ram, image_weights=False, device=, multi_scale=False, single_cls=False, optimizer=SGD, sync_bn=False, workers=8, project=runs/train, name=exp, exist_ok=False, quad=False, cos_lr=False, label_smoothing=0.0, patience=100, freeze=[0], save_period=-1, seed=0, local_rank=-1, entity=None, upload_dataset=False, bbox_interval=-1, artifact_alias=latest
+<span class=" -Color -Color-Bold -Color-Bold-Blue">github: </span>up to date with https://github.com/ultralytics/yolov5 ✅
+YOLOv5 🚀 v7.0-136-g71244ae Python-3.9.16 torch-2.0.0+cu118 CUDA:0 (Tesla T4, 15102MiB)
+
+<span class=" -Color -Color-Bold -Color-Bold-Blue">hyperparameters: </span>lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=0.05, cls=0.5, cls_pw=1.0, obj=1.0, obj_pw=1.0, iou_t=0.2, anchor_t=4.0, fl_gamma=0.0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, mosaic=1.0, mixup=0.0, copy_paste=0.0
+<span class=" -Color -Color-Bold -Color-Bold-Blue">ClearML: </span>run &#39;pip install clearml&#39; to automatically track, visualize and remotely train YOLOv5 🚀 in ClearML
+<span class=" -Color -Color-Bold -Color-Bold-Blue">Comet: </span>run &#39;pip install comet_ml&#39; to automatically track and visualize YOLOv5 🚀 runs in Comet
+<span class=" -Color -Color-Bold -Color-Bold-Blue">TensorBoard: </span>Start with &#39;tensorboard --logdir runs/train&#39;, view at http://localhost:6006/
+
+Dataset not found ⚠️, missing paths [&#39;/content/datasets/coco128/images/train2017&#39;]
+Downloading https://ultralytics.com/assets/coco128.zip to coco128.zip...
+100% 6.66M/6.66M [00:00&lt;00:00, 75.6MB/s]
+Dataset download success ✅ (0.6s), saved to <span class=" -Color -Color-Bold">/content/datasets</span>
+
+                 from  n    params  module                                  arguments                     
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]              
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]                
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]                   
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]               
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]                 
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]              
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]                 
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]              
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]                 
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]                 
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, &#39;nearest&#39;]          
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]                           
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]          
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]              
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, &#39;nearest&#39;]          
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]                           
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]          
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]              
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]                           
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]          
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]              
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]                           
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]          
+ 24      [17, 20, 23]  1    229245  models.yolo.Detect                      [80, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+Model summary: 214 layers, 7235389 parameters, 7235389 gradients, 16.6 GFLOPs
+
+Transferred 349/349 items from yolov5s.pt
+<span class=" -Color -Color-Bold -Color-Bold-Blue">AMP: </span>checks passed ✅
+<span class=" -Color -Color-Bold -Color-Bold-Blue">optimizer:</span> SGD(lr=0.01) with parameter groups 57 weight(decay=0.0), 60 weight(decay=0.0005), 60 bias
+<span class=" -Color -Color-Bold -Color-Bold-Blue">albumentations: </span>Blur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01), CLAHE(p=0.01, clip_limit=(1, 4.0), tile_grid_size=(8, 8))
+<span class=" -Color -Color-Bold -Color-Bold-Blue">train: </span>Scanning /content/datasets/coco128/labels/train2017... 126 images, 2 backgrounds, 0 corrupt: 100% 128/128 [00:00&lt;00:00, 1709.36it/s]
+<span class=" -Color -Color-Bold -Color-Bold-Blue">train: </span>New cache created: /content/datasets/coco128/labels/train2017.cache
+<span class=" -Color -Color-Bold -Color-Bold-Blue">train: </span>Caching images (0.1GB ram): 100% 128/128 [00:00&lt;00:00, 264.35it/s]
+<span class=" -Color -Color-Bold -Color-Bold-Blue">val: </span>Scanning /content/datasets/coco128/labels/train2017.cache... 126 images, 2 backgrounds, 0 corrupt: 100% 128/128 [00:00&lt;?, ?it/s]
+<span class=" -Color -Color-Bold -Color-Bold-Blue">val: </span>Caching images (0.1GB ram): 100% 128/128 [00:01&lt;00:00, 107.05it/s]
+
+<span class=" -Color -Color-Bold -Color-Bold-Blue">AutoAnchor: </span>4.27 anchors/target, 0.994 Best Possible Recall (BPR). Current anchors are a good fit to dataset ✅
+Plotting labels to runs/train/exp/labels.jpg... 
+Image sizes 640 train, 640 val
+Using 2 dataloader workers
+Logging results to <span class=" -Color -Color-Bold">runs/train/exp</span>
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+        0/2      3.91G    0.04618    0.07209    0.01703        232        640: 100% 8/8 [00:09&lt;00:00,  1.17s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100% 4/4 [00:01&lt;00:00,  2.01it/s]
+                   all        128        929      0.667      0.602       0.68       0.45
+
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+        1/2      4.76G    0.04622    0.06891    0.01817        201        640: 100% 8/8 [00:02&lt;00:00,  3.78it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100% 4/4 [00:01&lt;00:00,  2.16it/s]
+                   all        128        929      0.709      0.645      0.722      0.478
+
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+        2/2      4.76G     0.0436     0.0647    0.01698        227        640: 100% 8/8 [00:01&lt;00:00,  4.19it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100% 4/4 [00:01&lt;00:00,  2.95it/s]
+                   all        128        929      0.761      0.647      0.735       0.49
+
+3 epochs completed in 0.006 hours.
+Optimizer stripped from runs/train/exp/weights/last.pt, 14.8MB
+Optimizer stripped from runs/train/exp/weights/best.pt, 14.8MB
+
+Validating runs/train/exp/weights/best.pt...
+Fusing layers... 
+Model summary: 157 layers, 7225885 parameters, 0 gradients, 16.4 GFLOPs
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100% 4/4 [00:06&lt;00:00,  1.56s/it]
+                   all        128        929      0.759      0.646      0.734       0.49
+                person        128        254      0.857      0.706      0.805      0.525
+               bicycle        128          6      0.773      0.577      0.725      0.414
+                   car        128         46      0.664      0.435      0.551       0.24
+            motorcycle        128          5      0.587        0.8      0.837      0.635
+              airplane        128          6          1      0.989      0.995      0.715
+                   bus        128          7      0.635      0.714      0.753      0.651
+                 train        128          3      0.686      0.333       0.72      0.504
+                 truck        128         12      0.604      0.333      0.472      0.259
+                  boat        128          6      0.938      0.333      0.449      0.177
+         traffic light        128         14      0.778      0.255      0.401      0.217
+             stop sign        128          2      0.826          1      0.995      0.895
+                 bench        128          9      0.711      0.556      0.661      0.313
+                  bird        128         16      0.962          1      0.995      0.642
+                   cat        128          4      0.868          1      0.995      0.754
+                   dog        128          9          1      0.652      0.899      0.651
+                 horse        128          2      0.853          1      0.995      0.622
+              elephant        128         17      0.909      0.882      0.934      0.698
+                  bear        128          1      0.696          1      0.995      0.995
+                 zebra        128          4      0.855          1      0.995      0.905
+               giraffe        128          9      0.788      0.828      0.912      0.701
+              backpack        128          6      0.835        0.5      0.738      0.311
+              umbrella        128         18      0.785      0.814      0.859       0.48
+               handbag        128         19      0.759      0.263      0.366      0.205
+                   tie        128          7      0.983      0.714       0.77      0.492
+              suitcase        128          4      0.656          1      0.945      0.631
+               frisbee        128          5      0.721        0.8      0.759      0.724
+                  skis        128          1      0.737          1      0.995        0.3
+             snowboard        128          7      0.829      0.696       0.83      0.537
+           sports ball        128          6      0.637      0.667      0.602      0.311
+                  kite        128         10      0.636        0.6      0.599      0.226
+          baseball bat        128          4      0.501       0.25      0.468      0.205
+        baseball glove        128          7      0.483      0.429      0.465      0.292
+            skateboard        128          5      0.932        0.6      0.687      0.493
+         tennis racket        128          7       0.77      0.429      0.547      0.332
+                bottle        128         18      0.577      0.379      0.554      0.276
+            wine glass        128         16      0.704      0.875       0.89       0.51
+                   cup        128         36      0.841      0.667      0.837      0.533
+                  fork        128          6      0.992      0.333       0.45      0.315
+                 knife        128         16      0.768      0.688      0.695      0.403
+                 spoon        128         22      0.838       0.47      0.639      0.384
+                  bowl        128         28      0.764       0.58      0.716      0.513
+                banana        128          1      0.902          1      0.995      0.301
+              sandwich        128          2          1          0      0.359      0.326
+                orange        128          4      0.722       0.75      0.912      0.581
+              broccoli        128         11      0.547      0.364      0.432      0.317
+                carrot        128         24      0.619      0.625      0.724      0.495
+               hot dog        128          2      0.409          1      0.828      0.762
+                 pizza        128          5      0.833      0.995      0.962      0.727
+                 donut        128         14      0.631          1       0.96      0.839
+                  cake        128          4       0.87          1      0.995       0.83
+                 chair        128         35      0.583        0.6      0.608      0.317
+                 couch        128          6      0.907      0.667      0.815      0.544
+          potted plant        128         14      0.739      0.786      0.823       0.48
+                   bed        128          3      0.985      0.333       0.83      0.441
+          dining table        128         13      0.821      0.357      0.578      0.342
+                toilet        128          2          1      0.988      0.995      0.846
+                    tv        128          2       0.57          1      0.995      0.796
+                laptop        128          3          1          0      0.593      0.312
+                 mouse        128          2          1          0      0.089     0.0445
+                remote        128          8          1      0.624      0.634      0.538
+            cell phone        128          8      0.622      0.417      0.421      0.187
+             microwave        128          3      0.711          1      0.995      0.766
+                  oven        128          5      0.329        0.4       0.43      0.282
+                  sink        128          6      0.437      0.333      0.338      0.265
+          refrigerator        128          5      0.567        0.8      0.799      0.536
+                  book        128         29      0.597      0.257      0.349      0.154
+                 clock        128          9      0.765      0.889      0.932      0.736
+                  vase        128          2       0.33          1      0.995      0.895
+              scissors        128          1          1          0      0.497     0.0498
+            teddy bear        128         21      0.856      0.569      0.841      0.547
+            toothbrush        128          5        0.8          1      0.928      0.574
+Results saved to <span class=" -Color -Color-Bold">runs/train/exp</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualize">
+<h2>4. Visualize<a class="headerlink" href="#visualize" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="comet-logging-and-visualization-new">
+<h2>Comet Logging and Visualization 🌟 NEW<a class="headerlink" href="#comet-logging-and-visualization-new" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://www.comet.com/site/lp/yolov5-with-comet/?utm_source=yolov5&amp;utm_medium=partner&amp;utm_campaign=partner_yolov5_2022&amp;utm_content=yolov5_colab">Comet</a> is now fully integrated with YOLOv5. Track and visualize model metrics in real time, save your hyperparameters, datasets, and model checkpoints, and visualize your model predictions with <a class="reference external" href="https://www.comet.com/docs/v2/guides/comet-dashboard/code-panels/about-panels/?utm_source=yolov5&amp;utm_medium=partner&amp;utm_campaign=partner_yolov5_2022&amp;utm_content=yolov5_colab">Comet Custom Panels</a>! Comet makes sure you never lose track of your work and makes it easy to share results and collaborate across teams of all sizes!</p>
+<p>Getting started is easy:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>comet_ml<span class="w">  </span><span class="c1"># 1. install</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">COMET_API_KEY</span><span class="o">=</span>&lt;Your<span class="w"> </span>API<span class="w"> </span>Key&gt;<span class="w">  </span><span class="c1"># 2. paste API key</span>
+python<span class="w"> </span>train.py<span class="w"> </span>--img<span class="w"> </span><span class="m">640</span><span class="w"> </span>--epochs<span class="w"> </span><span class="m">3</span><span class="w"> </span>--data<span class="w"> </span>coco128.yaml<span class="w"> </span>--weights<span class="w"> </span>yolov5s.pt<span class="w">  </span><span class="c1"># 3. train</span>
+</pre></div>
+</div>
+<p>To learn more about all of the supported Comet features for this integration, check out the <a class="reference external" href="https://docs.ultralytics.com/yolov5/tutorials/comet_logging_integration">Comet Tutorial</a>. If you’d like to learn more about Comet, head over to our <a class="reference external" href="https://www.comet.com/docs/v2/?utm_source=yolov5&amp;utm_medium=partner&amp;utm_campaign=partner_yolov5_2022&amp;utm_content=yolov5_colab">documentation</a>. Get started by trying out the Comet Colab Notebook:
+<a class="reference external" href="https://colab.research.google.com/drive/1RG0WOQyxlDlo5Km8GogJpIEJlg_5lyYO?usp=sharing"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<a href="https://bit.ly/yolov5-readme-comet2">
+<img alt="Comet Dashboard" src="https://user-images.githubusercontent.com/26833433/202851203-164e94e1-2238-46dd-91f8-de020e9d6b41.png" width="1280"/></a></section>
+<section id="clearml-logging-and-automation-new">
+<h2>ClearML Logging and Automation 🌟 NEW<a class="headerlink" href="#clearml-logging-and-automation-new" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://cutt.ly/yolov5-notebook-clearml">ClearML</a> is completely integrated into YOLOv5 to track your experimentation, manage dataset versions and even remotely execute training runs. To enable ClearML (check cells above):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">clearml</span></code></p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">clearml-init</span></code> to connect to a ClearML server (<strong>deploy your own <a class="reference external" href="https://github.com/allegroai/clearml-server">open-source server</a></strong>, or use our <a class="reference external" href="https://cutt.ly/yolov5-notebook-clearml">free hosted server</a>)</p></li>
+</ul>
+<p>You’ll get all the great expected features from an experiment manager: live updates, model upload, experiment comparison etc. but ClearML also tracks uncommitted changes and installed packages for example. Thanks to that ClearML Tasks (which is what we call experiments) are also reproducible on different machines! With only 1 extra line, we can schedule a YOLOv5 training task on a queue to be executed by any number of ClearML Agents (workers).</p>
+<p>You can use ClearML Data to version your dataset and then pass it to YOLOv5 simply using its unique ID. This will help you keep track of your data without adding extra hassle. Explore the <a class="reference external" href="https://docs.ultralytics.com/yolov5/tutorials/clearml_logging_integration">ClearML Tutorial</a> for details!</p>
+<a href="https://cutt.ly/yolov5-notebook-clearml">
+<img alt="ClearML Experiment Management UI" src="https://github.com/thepycoder/clearml_screenshots/raw/main/scalars.jpg" width="1280"/></a></section>
+<section id="local-logging">
+<h2>Local Logging<a class="headerlink" href="#local-logging" title="Permalink to this heading">#</a></h2>
+<p>Training results are automatically logged with <a class="reference external" href="https://www.tensorflow.org/tensorboard">Tensorboard</a> and <a class="reference external" href="https://github.com/ultralytics/yolov5/pull/4148">CSV</a> loggers to <code class="docutils literal notranslate"><span class="pre">runs/train</span></code>, with a new experiment directory created for each new training as <code class="docutils literal notranslate"><span class="pre">runs/train/exp2</span></code>, <code class="docutils literal notranslate"><span class="pre">runs/train/exp3</span></code>, etc.</p>
+<p>This directory contains train and val statistics, mosaics, labels, predictions and augmentated mosaics, as well as metrics and charts including precision-recall (PR) curves and confusion matrices.</p>
+<img alt="Local logging results" src="https://user-images.githubusercontent.com/26833433/183222430-e1abd1b7-782c-4cde-b04d-ad52926bf818.jpg" width="1280"/>
+</section>
+<section id="environments">
+<h2>Environments<a class="headerlink" href="#environments" title="Permalink to this heading">#</a></h2>
+<p>YOLOv5 may be run in any of the following up-to-date verified environments (with all dependencies including <a class="reference external" href="https://developer.nvidia.com/cuda">CUDA</a>/<a class="reference external" href="https://developer.nvidia.com/cudnn">CUDNN</a>, <a class="reference external" href="https://www.python.org/">Python</a> and <a class="reference external" href="https://pytorch.org/">PyTorch</a> preinstalled):</p>
+<ul class="simple">
+<li><p><strong>Notebooks</strong> with free GPU: <a href="https://bit.ly/yolov5-paperspace-notebook"><img src="https://assets.paperspace.io/img/gradient-badge.svg" alt="Run on Gradient"></a> <a href="https://colab.research.google.com/github/ultralytics/yolov5/blob/master/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> <a href="https://www.kaggle.com/ultralytics/yolov5"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open In Kaggle"></a></p></li>
+<li><p><strong>Google Cloud</strong> Deep Learning VM. See <a class="reference external" href="https://docs.ultralytics.com/yolov5/environments/google_cloud_quickstart_tutorial/">GCP Quickstart Guide</a></p></li>
+<li><p><strong>Amazon</strong> Deep Learning AMI. See <a class="reference external" href="https://docs.ultralytics.com/yolov5/environments/aws_quickstart_tutorial/">AWS Quickstart Guide</a></p></li>
+<li><p><strong>Docker Image</strong>. See <a class="reference external" href="https://docs.ultralytics.com/yolov5/environments/docker_image_quickstart_tutorial/">Docker Quickstart Guide</a> <a href="https://hub.docker.com/r/ultralytics/yolov5"><img src="https://img.shields.io/docker/pulls/ultralytics/yolov5?logo=docker" alt="Docker Pulls"></a></p></li>
+</ul>
+</section>
+<section id="status">
+<h2>Status<a class="headerlink" href="#status" title="Permalink to this heading">#</a></h2>
+<p><img alt="YOLOv5 CI" src="https://github.com/ultralytics/yolov5/actions/workflows/ci-testing.yml/badge.svg" /></p>
+<p>If this badge is green, all <a class="reference external" href="https://github.com/ultralytics/yolov5/actions">YOLOv5 GitHub Actions</a> Continuous Integration (CI) tests are currently passing. CI tests verify correct operation of YOLOv5 training (<a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/train.py">train.py</a>), testing (<a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/val.py">val.py</a>), inference (<a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/detect.py">detect.py</a>) and export (<a class="reference external" href="https://github.com/ultralytics/yolov5/blob/master/export.py">export.py</a>) on macOS, Windows, and Ubuntu every 24 hours and on every commit.</p>
+</section>
+<section id="appendix">
+<h2>Appendix<a class="headerlink" href="#appendix" title="Permalink to this heading">#</a></h2>
+<p>Additional content below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOLOv5 PyTorch HUB Inference (DetectionModels only)</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">hub</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;ultralytics/yolov5&#39;</span><span class="p">,</span> <span class="s1">&#39;yolov5s&#39;</span><span class="p">,</span> <span class="n">force_reload</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># yolov5n - yolov5x6 or custom</span>
+<span class="n">im</span> <span class="o">=</span> <span class="s1">&#39;https://ultralytics.com/images/zidane.jpg&#39;</span>  <span class="c1"># file, Path, PIL.Image, OpenCV, nparray, list</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>  <span class="c1"># inference</span>
+<span class="n">results</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>  <span class="c1"># or .show(), .save(), .crop(), .pandas(), etc.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="markdown.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Markdown Files</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detect">1. Detect</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validate">2. Validate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#train">3. Train</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#label-a-dataset-on-roboflow-optional">Label a dataset on Roboflow (optional)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize">4. Visualize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comet-logging-and-visualization-new">Comet Logging and Visualization 🌟 NEW</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clearml-logging-and-automation-new">ClearML Logging and Automation 🌟 NEW</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-logging">Local Logging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environments">Environments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#status">Status</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Potential
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
