@@ -8,3 +8,5 @@ chapters:
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks
+- file: chatgpt-tip/askthecode-plugin
+- file: semester1/gis/introduct-gis

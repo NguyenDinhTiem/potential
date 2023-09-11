@@ -64,6 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chatgpt-tip/askthecode-plugin';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Intro to GIS" href="../semester1/gis/introduct-gis.html" />
+    <link rel="prev" title="Notebooks with MyST Markdown" href="../markdown-notebooks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,11 +156,13 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../YOLOv5_Tutorial.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prompt cho askthecode plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../semester1/gis/introduct-gis.html">Intro to GIS</a></li>
 </ul>
 
     </div>
@@ -352,18 +356,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Prompt cho askthecode plugin</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-cau-truc-kho-luu-tru">1. <strong>Phân tích Cấu trúc Kho Lưu Trữ</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#truy-van-noi-dung-tep-cu-the">2. <strong>Truy Vấn Nội Dung Tệp Cụ Thể</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-ma-nguon-hoac-thu-vien-cu-the">3. <strong>Phân tích Mã Nguồn hoặc Thư Viện Cụ Thể</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tim-vi-du-hoac-su-dung-cu-the">4. <strong>Tìm Ví dụ hoặc Sử Dụng Cụ Thể</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-kien-truc-hoac-mo-hinh-du-lieu">5. <strong>Phân tích Kiến Trúc hoặc Mô hình Dữ Liệu</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kiem-tra-giay-phep-tai-lieu-hoac-huong-dan-dong-gop">6. <strong>Kiểm tra Giấy Phép, Tài liệu, hoặc Hướng dẫn Đóng Góp</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#yeu-cau-phan-tich-tong-the-hoac-cu-the">7. <strong>Yêu cầu Phân tích Tổng thể hoặc Cụ thể</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vi-du-phan-tich-cach-su-dung-thu-vien-trong-du-an-ma-nguon-mo">Ví dụ: Phân tích Cách Sử Dụng Thư Viện trong Dự án Mã Nguồn Mở</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ket-luan">Kết luận</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-cau-truc-kho-luu-tru">1. <strong>Phân tích Cấu trúc Kho Lưu Trữ</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truy-van-noi-dung-tep-cu-the">2. <strong>Truy Vấn Nội Dung Tệp Cụ Thể</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-ma-nguon-hoac-thu-vien-cu-the">3. <strong>Phân tích Mã Nguồn hoặc Thư Viện Cụ Thể</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tim-vi-du-hoac-su-dung-cu-the">4. <strong>Tìm Ví dụ hoặc Sử Dụng Cụ Thể</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-kien-truc-hoac-mo-hinh-du-lieu">5. <strong>Phân tích Kiến Trúc hoặc Mô hình Dữ Liệu</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kiem-tra-giay-phep-tai-lieu-hoac-huong-dan-dong-gop">6. <strong>Kiểm tra Giấy Phép, Tài liệu, hoặc Hướng dẫn Đóng Góp</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yeu-cau-phan-tich-tong-the-hoac-cu-the">7. <strong>Yêu cầu Phân tích Tổng thể hoặc Cụ thể</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vi-du-phan-tich-cach-su-dung-thu-vien-trong-du-an-ma-nguon-mo">Ví dụ: Phân tích Cách Sử Dụng Thư Viện trong Dự án Mã Nguồn Mở</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ket-luan">Kết luận</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -374,7 +376,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="prompt-cho-askthecode-plugin">
+  <section class="tex2jax_ignore mathjax_ignore" id="prompt-cho-askthecode-plugin">
 <h1>Prompt cho askthecode plugin<a class="headerlink" href="#prompt-cho-askthecode-plugin" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Prompt 1: “Can you analyze this Github repository for me? The link is [repository URL].”</p></li>
@@ -384,51 +386,50 @@ document.write(`
 <li><p>Prompt 5: “Can you help me navigate this Github repository? Here is the link: [repository URL].”</p></li>
 </ul>
 <p>Khi sử dụng plugin AskTheCode, việc đặt các câu hỏi (prompt) một cách hiệu quả sẽ giúp bạn trích xuất thông tin chính xác và hữu ích từ các kho lưu trữ mã nguồn. Dưới đây là một số gợi ý về các prompt hiệu quả:</p>
-</section>
 <section id="phan-tich-cau-truc-kho-luu-tru">
-<h1>1. <strong>Phân tích Cấu trúc Kho Lưu Trữ</strong>:<a class="headerlink" href="#phan-tich-cau-truc-kho-luu-tru" title="Permalink to this heading">#</a></h1>
+<h2>1. <strong>Phân tích Cấu trúc Kho Lưu Trữ</strong>:<a class="headerlink" href="#phan-tich-cau-truc-kho-luu-tru" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>“Phân tích cấu trúc của kho lưu trữ GitHub tại [URL].”</p></li>
 <li><p>“Cho tôi biết cấu trúc tệp và thư mục của dự án tại [URL].”</p></li>
 </ul>
 </section>
 <section id="truy-van-noi-dung-tep-cu-the">
-<h1>2. <strong>Truy Vấn Nội Dung Tệp Cụ Thể</strong>:<a class="headerlink" href="#truy-van-noi-dung-tep-cu-the" title="Permalink to this heading">#</a></h1>
+<h2>2. <strong>Truy Vấn Nội Dung Tệp Cụ Thể</strong>:<a class="headerlink" href="#truy-van-noi-dung-tep-cu-the" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>“Cho tôi xem nội dung của tệp [file_path] trong kho lưu trữ [URL].”</p></li>
 <li><p>“Truy vấn mã nguồn của tệp [file_path] trong dự án tại [URL].”</p></li>
 </ul>
 </section>
 <section id="phan-tich-ma-nguon-hoac-thu-vien-cu-the">
-<h1>3. <strong>Phân tích Mã Nguồn hoặc Thư Viện Cụ Thể</strong>:<a class="headerlink" href="#phan-tich-ma-nguon-hoac-thu-vien-cu-the" title="Permalink to this heading">#</a></h1>
+<h2>3. <strong>Phân tích Mã Nguồn hoặc Thư Viện Cụ Thể</strong>:<a class="headerlink" href="#phan-tich-ma-nguon-hoac-thu-vien-cu-the" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>“Phân tích cách thư viện [library_name] được sử dụng trong kho lưu trữ [URL].”</p></li>
 <li><p>“Cho tôi biết cách hàm [function_name] hoạt động trong dự án tại [URL].”</p></li>
 </ul>
 </section>
 <section id="tim-vi-du-hoac-su-dung-cu-the">
-<h1>4. <strong>Tìm Ví dụ hoặc Sử Dụng Cụ Thể</strong>:<a class="headerlink" href="#tim-vi-du-hoac-su-dung-cu-the" title="Permalink to this heading">#</a></h1>
+<h2>4. <strong>Tìm Ví dụ hoặc Sử Dụng Cụ Thể</strong>:<a class="headerlink" href="#tim-vi-du-hoac-su-dung-cu-the" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>“Tìm các ví dụ về cách sử dụng hàm [function_name] trong kho lưu trữ [URL].”</p></li>
 <li><p>“Cho tôi xem tất cả các tệp sử dụng thư viện [library_name] trong dự án tại [URL].”</p></li>
 </ul>
 </section>
 <section id="phan-tich-kien-truc-hoac-mo-hinh-du-lieu">
-<h1>5. <strong>Phân tích Kiến Trúc hoặc Mô hình Dữ Liệu</strong>:<a class="headerlink" href="#phan-tich-kien-truc-hoac-mo-hinh-du-lieu" title="Permalink to this heading">#</a></h1>
+<h2>5. <strong>Phân tích Kiến Trúc hoặc Mô hình Dữ Liệu</strong>:<a class="headerlink" href="#phan-tich-kien-truc-hoac-mo-hinh-du-lieu" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>“Phân tích kiến trúc của dự án tại [URL].”</p></li>
 <li><p>“Cho tôi biết mô hình dữ liệu được sử dụng trong kho lưu trữ [URL].”</p></li>
 </ul>
 </section>
 <section id="kiem-tra-giay-phep-tai-lieu-hoac-huong-dan-dong-gop">
-<h1>6. <strong>Kiểm tra Giấy Phép, Tài liệu, hoặc Hướng dẫn Đóng Góp</strong>:<a class="headerlink" href="#kiem-tra-giay-phep-tai-lieu-hoac-huong-dan-dong-gop" title="Permalink to this heading">#</a></h1>
+<h2>6. <strong>Kiểm tra Giấy Phép, Tài liệu, hoặc Hướng dẫn Đóng Góp</strong>:<a class="headerlink" href="#kiem-tra-giay-phep-tai-lieu-hoac-huong-dan-dong-gop" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>“Cho tôi xem giấy phép của dự án tại [URL].”</p></li>
 <li><p>“Truy vấn tài liệu hoặc hướng dẫn đóng góp của dự án tại [URL].”</p></li>
 </ul>
 </section>
 <section id="yeu-cau-phan-tich-tong-the-hoac-cu-the">
-<h1>7. <strong>Yêu cầu Phân tích Tổng thể hoặc Cụ thể</strong>:<a class="headerlink" href="#yeu-cau-phan-tich-tong-the-hoac-cu-the" title="Permalink to this heading">#</a></h1>
+<h2>7. <strong>Yêu cầu Phân tích Tổng thể hoặc Cụ thể</strong>:<a class="headerlink" href="#yeu-cau-phan-tich-tong-the-hoac-cu-the" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>“Phân tích dự án GitHub tại [URL] và cho tôi biết về công nghệ, thư viện, và kiến trúc chính.”</p></li>
 <li><p>“Cho tôi biết cách dự án tại [URL] xử lý [concept_or_feature].”</p></li>
@@ -436,7 +437,7 @@ document.write(`
 <p>Những prompt này giúp bạn định rõ yêu cầu và tập trung vào thông tin cụ thể bạn muốn trích xuất từ kho lưu trữ mã nguồn. Việc đặt câu hỏi một cách rõ ràng và cụ thể sẽ giúp plugin hoạt động hiệu quả hơn và cung cấp thông tin chính xác và hữu ích cho bạn.</p>
 </section>
 <section id="vi-du-phan-tich-cach-su-dung-thu-vien-trong-du-an-ma-nguon-mo">
-<h1>Ví dụ: Phân tích Cách Sử Dụng Thư Viện trong Dự án Mã Nguồn Mở<a class="headerlink" href="#vi-du-phan-tich-cach-su-dung-thu-vien-trong-du-an-ma-nguon-mo" title="Permalink to this heading">#</a></h1>
+<h2>Ví dụ: Phân tích Cách Sử Dụng Thư Viện trong Dự án Mã Nguồn Mở<a class="headerlink" href="#vi-du-phan-tich-cach-su-dung-thu-vien-trong-du-an-ma-nguon-mo" title="Permalink to this heading">#</a></h2>
 <p><strong>Bước 1: Xác định Kho Lưu Trữ</strong></p>
 <ul class="simple">
 <li><p>Tìm một kho lưu trữ GitHub chứa mã nguồn mở mà bạn muốn phân tích. Ví dụ, bạn muốn tìm hiểu cách thư viện “React” được sử dụng trong một dự án web cụ thể.</p></li>
@@ -463,9 +464,10 @@ document.write(`
 </ul>
 </section>
 <section id="ket-luan">
-<h1>Kết luận<a class="headerlink" href="#ket-luan" title="Permalink to this heading">#</a></h1>
+<h2>Kết luận<a class="headerlink" href="#ket-luan" title="Permalink to this heading">#</a></h2>
 <p>Với plugin AskTheCode, bạn có thể dễ dàng truy cập và phân tích mã nguồn từ các kho lưu trữ GitHub, giúp bạn nhanh chóng hiểu rõ cách sử dụng các thư viện, công nghệ, hoặc kỹ thuật lập trình cụ thể. Điều này không chỉ giúp bạn học hỏi từ mã nguồn của người khác mà còn giúp bạn áp dụng kiến thức đó để cải thiện dự án của mình.</p>
 <p>Hy vọng ví dụ này giúp bạn hiểu rõ hơn về cách khai thác plugin này trong việc lập trình của mình!</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -499,6 +501,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../markdown-notebooks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../semester1/gis/introduct-gis.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Intro to GIS</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -517,18 +537,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Prompt cho askthecode plugin</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-cau-truc-kho-luu-tru">1. <strong>Phân tích Cấu trúc Kho Lưu Trữ</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#truy-van-noi-dung-tep-cu-the">2. <strong>Truy Vấn Nội Dung Tệp Cụ Thể</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-ma-nguon-hoac-thu-vien-cu-the">3. <strong>Phân tích Mã Nguồn hoặc Thư Viện Cụ Thể</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tim-vi-du-hoac-su-dung-cu-the">4. <strong>Tìm Ví dụ hoặc Sử Dụng Cụ Thể</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-kien-truc-hoac-mo-hinh-du-lieu">5. <strong>Phân tích Kiến Trúc hoặc Mô hình Dữ Liệu</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kiem-tra-giay-phep-tai-lieu-hoac-huong-dan-dong-gop">6. <strong>Kiểm tra Giấy Phép, Tài liệu, hoặc Hướng dẫn Đóng Góp</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#yeu-cau-phan-tich-tong-the-hoac-cu-the">7. <strong>Yêu cầu Phân tích Tổng thể hoặc Cụ thể</strong>:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vi-du-phan-tich-cach-su-dung-thu-vien-trong-du-an-ma-nguon-mo">Ví dụ: Phân tích Cách Sử Dụng Thư Viện trong Dự án Mã Nguồn Mở</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ket-luan">Kết luận</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-cau-truc-kho-luu-tru">1. <strong>Phân tích Cấu trúc Kho Lưu Trữ</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truy-van-noi-dung-tep-cu-the">2. <strong>Truy Vấn Nội Dung Tệp Cụ Thể</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-ma-nguon-hoac-thu-vien-cu-the">3. <strong>Phân tích Mã Nguồn hoặc Thư Viện Cụ Thể</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tim-vi-du-hoac-su-dung-cu-the">4. <strong>Tìm Ví dụ hoặc Sử Dụng Cụ Thể</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-tich-kien-truc-hoac-mo-hinh-du-lieu">5. <strong>Phân tích Kiến Trúc hoặc Mô hình Dữ Liệu</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kiem-tra-giay-phep-tai-lieu-hoac-huong-dan-dong-gop">6. <strong>Kiểm tra Giấy Phép, Tài liệu, hoặc Hướng dẫn Đóng Góp</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yeu-cau-phan-tich-tong-the-hoac-cu-the">7. <strong>Yêu cầu Phân tích Tổng thể hoặc Cụ thể</strong>:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vi-du-phan-tich-cach-su-dung-thu-vien-trong-du-an-ma-nguon-mo">Ví dụ: Phân tích Cách Sử Dụng Thư Viện trong Dự án Mã Nguồn Mở</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ket-luan">Kết luận</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
