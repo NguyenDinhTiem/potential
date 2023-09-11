@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Intro to GIS &#8212; AI Potential</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'semester1/gis/introduct-gis';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../YOLOv5_Tutorial.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NguyenDinhTiem/potential" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NguyenDinhTiem/potential/issues/new?title=Issue%20on%20page%20%2Fsemester1/gis/introduct-gis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/semester1/gis/introduct-gis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Intro to GIS</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="intro-to-gis">
+<h1>Intro to GIS<a class="headerlink" href="#intro-to-gis" title="Permalink to this heading">#</a></h1>
+<p>Năm 1960 GIS hoạt động đầu tiên tại Ottawa, Canada được gọi là hệ thống thông tin địa lí Cannada được sử dụng để lưu trữ, phân tích, thao tác dữ liệu, thu thập đất đai cho nông thôn.
+Cho đến năm 1980-9: GIS bắt đầu được thương mại hóa và đến ngày nay thời kì cởi mở và sử dụng phổ biến.</p>
+<p>Tôi hiểu GIS như là bản đồ địa lí được không?</p>
+<p>Các dạng tồn tại của đối tượng trong thế giới thực:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Ngữ nghĩa</p></th>
+<th class="head text-center"><p>Không Gian</p></th>
+<th class="head text-left"><p>Thời gian</p></th>
+<th class="head text-left"><p>Ví dụ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>y</p></td>
+<td class="text-center"><p>n</p></td>
+<td class="text-left"><p>n</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>n</p></td>
+<td class="text-center"><p>y</p></td>
+<td class="text-left"><p>n</p></td>
+<td class="text-left"><p>Khối 3D chụp từ vệ tinh</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>n</p></td>
+<td class="text-center"><p>n</p></td>
+<td class="text-left"><p>y</p></td>
+<td class="text-left"><p>thứ, năm</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>y</p></td>
+<td class="text-center"><p>y</p></td>
+<td class="text-left"><p>n</p></td>
+<td class="text-left"><p>con sông</p></td>
+</tr>
+</tbody>
+</table>
+<p>Ví dụ : Cây cầu</p>
+<ul class="simple">
+<li><p>Không gian: Tập hợp các đường: điểm đầu, điểm cuối, các điểm trung gian, 1 mặt tập hợp các đỉnh đa giác, tọa độ cây cầu trên bản đồ</p></li>
+<li><p>Thời gian: Ngày khởi công, ngày hoàn thành, ngày sửa chữa</p></li>
+<li><p>Ngữ nghĩa: Tên cây cầu, loại ccaay cầu, chủ đầu tư, tổng kinh phí…….</p></li>
+</ul>
+<p>Chiều thời gian không chỉ cần thiết trong csdl địa lý mà một httt cũng cần thiết</p>
+<p>Ví dụ: NV( MSNV, MSCV, ngaynhanchuc)</p>
+<ul class="simple">
+<li><p>Điểm thời gian(instant): một điểm trên trục thời gian</p></li>
+<li><p>Đoạn thời gian</p></li>
+<li><p>Khoảng thời gian</p></li>
+<li><p>Độ phân giải và thứ tự của thời gian</p></li>
+<li><p>Độ phân giải(grabularity): là đoạn thời gian nhỏ nhất trên trục thời gian. Thời gian liên tục thì trục thời gian đẳng cấu với tập số thực. Thời gian rời rạc thì trục thời gian bao gồm những điểm xác định.</p></li>
+</ul>
+<p>GIS hình thành từ khoa học liên ngành: KHMT, Toán học, địa lý học, bản đồ học…</p>
+<p>GIS - Geographic Information System</p>
+<ol class="arabic simple">
+<li><p>Hệ thống thông tin địa lí</p></li>
+</ol>
+<ul>
+<li><p>Hệ thống là tập hợp các thành phần con phối hợp với nhau một cách khoa học để đạt được 1 mục tiêu</p></li>
+<li><p>Thông tin: Data –&gt; thông tin –&gt; tri thức –&gt; wistom</p>
+<p>Hệ thống thông tin:</p>
+<ul class="simple">
+<li><p>Lưu trữ</p></li>
+<li><p>Xử lí</p></li>
+<li><p>Biểu diễn</p></li>
+<li><p>Truyền</p></li>
+<li><p>Tiếp nhận</p></li>
+</ul>
+</li>
+<li><p>Yếu tố không gian: (x, y), (kinh độ, vĩ độ)</p></li>
+</ul>
+<p>=&gt; Hệ thống thông tin địa lý là sự kế hợp của hệ thống thông tin và yếu tố không gian</p>
+<ul class="simple">
+<li><p>Đối tượng trong HTTTDL bao gồm 3 thuộc tính: Ngữ nghĩa, Không gian, Thời gian</p></li>
+<li><p>Tip của thầy:</p>
+<ul>
+<li><p>Bài toán lớn là tập hợp các bài toán nhỏ bị che dấu, vì vậy các em cần xác định được những bài toán nhỏ</p></li>
+<li><p>Viết nhật ký hằng ngày theo dõi sự phát triển của bản thân</p></li>
+<li><p>Cách tốt nhất để chuẩn bị câu trả lời cho các câu hỏi khi bảo vệ luận văn là đi nghe các buổi bảo vệ và ghi lại những câu hỏi đó, hoặc xin các câu hỏi từ thầy cô hướng dẫn.</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Mối quan hệ không gian</p></li>
+</ol>
+<ul class="simple">
+<li><p>Thứ tự</p></li>
+<li><p>Topology</p></li>
+<li><p>Độ đo: 1D - Chiều dài, 2D - Chu vi, diện tích, 3D - Thể tích</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Biểu diễn một đối tượng không gian</p></li>
+</ol>
+<ul class="simple">
+<li><p>Vector: Tọa đổ các điểm trên đường viền, thường dùng để biểu diễn các đối tượng nhân tạo</p></li>
+<li><p>Raster: Chia đối tượng thành các pixel, thường dùng để biểu diễn các đối tượng tự nhiên</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Các chức năng của GIS</p></li>
+</ol>
+<ul class="simple">
+<li><p>Thu nhận dữ liệu</p></li>
+<li><p>Cấu trúc</p></li>
+<li><p>Thao tác</p></li>
+<li><p>Phân tích</p></li>
+<li><p>Trình bày dữ liệu</p></li>
+</ul>
+<p>5.Kết luận</p>
+<ul class="simple">
+<li><p>GIS là ngành khoa học được xây dựng và phát triển trên nền tảng của một số ngành khoa học khác.</p></li>
+<li><p>Các GIS có thể tồn tại dưới một số mô hình, các mô hình càng mịn càng mô tả rõ hệ thống.</p></li>
+<li><p>GIS là HTTT có tính trực quan cao nhờ yếu tố không gian.</p></li>
+<li><p>GIS còn là HTTT theo thời gian nhằm biểu diễn lịch sử biến đống các đối tượng trong vòng đời của chúng.</p></li>
+<li><p>Các ứng dụng GIS là rất phổ biến, đa dạng</p></li>
+<li><p>Đầu tư GIS là khá tốn kém do đòi hỏi CS hạ tầng là các công nghệ cao.</p></li>
+<li><p>GIS thành công phụ thuộc: khảo sát, phân tích, thiết kế, xây dựng, kiểm định, khai thác, bảo trì, cập nhật.</p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>Một số đề tài GIS
+Xây dựng hệ thống thông tin địa lý quản lý tổng hợp tài nguyên nước đồng bằng sông Cửu Long 
+ThS. Nguyễn Hiếu Trung, ThS Nguyễn Võ Châu Ngân PGS.TSKH Lê Quang Minh 
+Nghiên cứu mô hình hệ thống thông tin địa lý tự động giám sát môi trường và diễn biến lũ lụt vùng đồng bằng sông Cửu Long (MEKOGIS.1)
+Trung tâm Công Nghệ Thông Tin Địa Lý (DITAGIS) tổ chức nhằm tổng kết đề tài NCKH độc lập cấp nhà nước về Hệ thống thông 
+Hệ thống GIS quản lý sản xuất lúa vùng đồng bằng sông Cửu Long 
+TSKH Nguyễn Đăng Vỹ - Trung tâm Công nghệ phần mềm thủy lợi
+GIS VÀ NHỮNG ỨNG DỤNG BAN ĐẦU TRONG CÔNG TÁC QUY HOẠCH NUÔI TRỒNG THỦY SẢN Ở ĐBSCL -</p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./semester1\gis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Potential
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,17 +1,17 @@
 Traceback (most recent call last):
-  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+  File "C:\Users\nguye\miniconda3\envs\mybook\lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
     executenb(
-  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\nbclient\client.py", line 1305, in execute
+  File "C:\Users\nguye\miniconda3\envs\mybook\lib\site-packages\nbclient\client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\jupyter_core\utils\__init__.py", line 166, in wrapped
+  File "C:\Users\nguye\miniconda3\envs\mybook\lib\site-packages\jupyter_core\utils\__init__.py", line 166, in wrapped
     return loop.run_until_complete(inner)
-  File "C:\Users\potential\anaconda3\envs\potential\lib\asyncio\base_events.py", line 616, in run_until_complete
+  File "C:\Users\nguye\miniconda3\envs\mybook\lib\asyncio\base_events.py", line 616, in run_until_complete
     return future.result()
-  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\nbclient\client.py", line 705, in async_execute
+  File "C:\Users\nguye\miniconda3\envs\mybook\lib\site-packages\nbclient\client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+  File "C:\Users\nguye\miniconda3\envs\mybook\lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "C:\Users\potential\anaconda3\envs\potential\lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+  File "C:\Users\nguye\miniconda3\envs\mybook\lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -26,7 +26,7 @@ display = utils.notebook_init()  # checks
 
 ----- stdout -----
 [WinError 2] The system cannot find the file specified: 'yolov5'
-E:\Tiemblog\potential\potential
+C:\Users\nguye\Documents\potential\potential
 ----- stderr -----
 fatal: Too many arguments.
 
@@ -74,8 +74,11 @@ usage: git clone [<options>] [--] <repo> [<dir>]
     -4, --ipv4            use IPv4 addresses only
     -6, --ipv6            use IPv6 addresses only
     --filter <args>       object filtering
+    --also-filter-submodules
+                          apply partial clone filters to submodules
     --remote-submodules   any cloned submodules will use their remote-tracking branch
     --sparse              initialize sparse-checkout file to include only files at root
+    --bundle-uri <uri>    a URI for downloading bundles before fetching from origin remote
 ----- stderr -----
 ERROR: Invalid requirement: '#'
 ----- stdout -----
